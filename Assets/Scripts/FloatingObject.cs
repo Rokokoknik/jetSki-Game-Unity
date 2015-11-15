@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Floater1 : MonoBehaviour {
+public class FloatingObject : MonoBehaviour {
 	public float waterLevel, floatHeight;
 	public Vector3 buoyancyCentreOffset;
 	public float bounceDamp;
