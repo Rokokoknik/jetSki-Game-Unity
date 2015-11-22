@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: a16ff56f2577945bba02403274ab57cb
+timeCreated: 1448183348
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 94afa8e355035cca329d4936f23f43b6
+  longitude: -2.25
+  latitude: 53.482999999999997
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -1.84866548, y: 1.76524866, z: -2.7796886}
+      lookAt: {x: 1.62405717, y: -1.25411904, z: 2.58509493}
+      up: {x: .232134715, y: .904163957, z: .358609825}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Barrel
+    100002: //RootNode
+    100004: CoffinBox01
+    100006: GrainSack01
+    100008: SquareBox01
+    400000: Barrel
+    400002: //RootNode
+    400004: CoffinBox01
+    400006: GrainSack01
+    400008: SquareBox01
+    2300000: Barrel
+    2300002: CoffinBox01
+    2300004: GrainSack01
+    2300006: SquareBox01
+    3300000: Barrel
+    3300002: CoffinBox01
+    3300004: GrainSack01
+    3300006: SquareBox01
+    4300000: Mesh GrainSack01
+    4300002: Mesh Barrel
+    4300004: Mesh SquareBox01
+    4300006: Mesh CoffinBox01
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
