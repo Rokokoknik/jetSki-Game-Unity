@@ -475,6 +475,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1425757407 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100482, guid: 40857e38623734548a56caa80fb1e0fb, type: 3}
+  m_PrefabInternal: {fileID: 285509382}
+--- !u!114 &1425757409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425757407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3dc2a495d31644694a6ba6fd03d907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentspeed: 0
+  maxspeed: 10
+  acceleration: .5
+  deceleration: 1.25
+  tilt: 3
+  angle: 5
+  rotateangle: 0
+--- !u!54 &1425757411
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425757407}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1531271558
 Prefab:
   m_ObjectHideFlags: 0

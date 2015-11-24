@@ -434,12 +434,42 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+  - Android::ScriptingBackend
+  - Standalone::ScriptingBackend
+  - WebGL::ScriptingBackend
+  - WebGL::audioCompressionFormat
+  - WebGL::exceptionSupport
+  - WebGL::memorySize
   - WebPlayer::ScriptingBackend
+  - iOS::Architecture
+  - iOS::EnableIncrementalBuildSupportForIl2cpp
+  - iOS::ScriptingBackend
+  Android::ScriptingBackend: 0
+  Standalone::ScriptingBackend: 0
+  WebGL::ScriptingBackend: 1
+  WebGL::audioCompressionFormat: 4
+  WebGL::exceptionSupport: 1
+  WebGL::memorySize: 256
   WebPlayer::ScriptingBackend: 0
+  iOS::Architecture: 2
+  iOS::EnableIncrementalBuildSupportForIl2cpp: 0
+  iOS::ScriptingBackend: 1
   boolPropertyNames:
+  - WebGL::analyzeBuildSize
+  - WebGL::dataCaching
+  - WebGL::useEmbeddedResources
   - XboxOne::enus
+  WebGL::analyzeBuildSize: 0
+  WebGL::dataCaching: 0
+  WebGL::useEmbeddedResources: 0
   XboxOne::enus: 1
-  stringPropertyNames: []
+  stringPropertyNames:
+  - WebGL::emscriptenArgs
+  - WebGL::template
+  - additionalIl2CppArgs::additionalIl2CppArgs
+  WebGL::emscriptenArgs: 
+  WebGL::template: APPLICATION:Default
+  additionalIl2CppArgs::additionalIl2CppArgs: 
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectName: 
