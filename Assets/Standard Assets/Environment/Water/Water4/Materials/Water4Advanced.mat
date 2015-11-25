@@ -45,18 +45,18 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _RefractionTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _ShoreTex
         second:
           m_Texture: {fileID: 2800000, guid: 36dd0b22da8874ed38075789055ca664, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 1, y: 1}
+      data:
+        first:
+          name: _RefractionTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _WavesTex
@@ -162,10 +162,6 @@ Material:
         second: 313.218384
       data:
         first:
-          name: _InvFade
-        second: .628782988
-      data:
-        first:
           name: _FresnelScale
         second: .657142818
       data:
@@ -180,6 +176,10 @@ Material:
         first:
           name: _NormalsDisplacement
         second: 0
+      data:
+        first:
+          name: _InvFade
+        second: .628782988
       data:
         first:
           name: _WaveScale
@@ -251,15 +251,11 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Displacement
-        second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
-      data:
-        first:
-          name: _ShoreTiling
-        second: {r: 1, g: 1, b: .100000001, a: .100000001}
-      data:
-        first:
           name: _MainTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _ReflectionTex_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
@@ -343,12 +339,16 @@ Material:
         second: {r: .505434752, g: .505434752, b: .505434752, a: .5}
       data:
         first:
-          name: _ReflectionTex_ST
+          name: _RefractionTex_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
-          name: _RefractionTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
+          name: _Displacement
+        second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
+      data:
+        first:
+          name: _ShoreTiling
+        second: {r: 1, g: 1, b: .100000001, a: .100000001}
       data:
         first:
           name: _RefrColor

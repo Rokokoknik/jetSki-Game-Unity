@@ -18,4 +18,8 @@ public class PlayerStats : MonoBehaviour {
 	public void AddScore(int score){
 		this.currentScore += score;
 	}
+
+	public int GetScore(){
+		return this.currentScore;
+	}
 }
