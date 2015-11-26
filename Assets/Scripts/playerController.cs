@@ -29,33 +29,46 @@ public class playerController : MonoBehaviour
 	public float tilt;
 	public float angle;
 	public float rotateangle = 0.0f;
+
+	private bool movingforward = false;
+	private bool movingbackward = false;
 	/*public Boundary boundary;*/
 
 	void FixedUpdate()
 	{
 		//Grabs value from the Vertical axis movement (currently the up arrow or w key, and down arrow or s key)
 		float moveVertical = Input.GetAxis ("Vertical");
-
+		float moveHorizontal = Input.GetAxis ("Horizontal");
 		//Vector3 movement = new Vector3 (0.0f, moveVertical, 0.0f);
 
 		//Checks to see what kind of movement to take (forward, backwards, or braking)
-		if (moveVertical > 0.0f) {
+		if (moveVertical > 0.0f && !movingbackward) {
 			rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
+			//rb.AddForce(transform.forward * (currentspeed/2.0f));
+			movingforward = true;
 			if (currentspeed < maxspeed)
 				currentspeed += acceleration;
-		} else if (moveVertical < 0.0f) {
-			rb.velocity = rb.transform.TransformDirection (-Vector3.forward * currentspeed / 2.0f);
+		} else if (moveVertical < 0.0f && !movingforward) {
+			rb.velocity = rb.transform.TransformDirection (-Vector3.forward * currentspeed);
+			//rb.AddForce (-transform.forward * currentspeed);
+			movingbackward = true;
 			if (currentspeed < maxspeed)
-				currentspeed += acceleration;
+				currentspeed = currentspeed/2.0f + acceleration;
 		} else {
 			rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
 			if (currentspeed > 0.0f)
 			{
 				currentspeed -= deceleration;
-				if (currentspeed < 0.0f)
+				if (currentspeed <= 0.0f)
+				{
 					currentspeed = 0.0f;
+					movingforward = false;
+					movingbackward = false;
+				}
 			}
 		}
+		rotateangle += moveHorizontal * angle;
+		rb.rotation = Quaternion.AngleAxis (rotateangle, Vector3.up);
 			//rb.velocity = movement * speed;
 		//playerRotate (moveHorizontal);
 
@@ -65,13 +78,13 @@ public class playerController : MonoBehaviour
 			0.0f,
 			Mathf.Clamp (rb.position.z, boundary.zMin, boundary.zMax)
 		);*/
-
+		//Used for controling tilt
 		//rb.rotation = Quaternion.Euler (rb.velocity.z * -tilt, 0.0f, rb.velocity.x * -tilt);
 		//rb.rotation = Quaternion.Euler (rb.velocity.z * tilt, 0.0f, 0.0f);
 	}
 
 	//Update used for controlling rotation
-	void Update()
+	/*void Update()
 	{
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		rotateangle += moveHorizontal * angle;
@@ -90,7 +103,7 @@ public class playerController : MonoBehaviour
 			transform.Rotate (0, 330, 0);
 		else
 			;
-		*/
+
 		rb.rotation = Quaternion.AngleAxis (rotateangle, Vector3.up);
-	}
+	}*/
 }
