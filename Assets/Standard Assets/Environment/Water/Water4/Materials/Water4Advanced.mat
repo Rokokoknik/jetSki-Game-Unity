@@ -255,6 +255,7 @@ Material:
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
+<<<<<<< Updated upstream
           name: _Displacement
         second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
       data:
@@ -264,10 +265,21 @@ Material:
       data:
         first:
           name: _ReflectionTex_ST
+=======
+          name: _BumpMap_ST
+>>>>>>> Stashed changes
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
-          name: _BumpMap_ST
+          name: _Displacement
+        second: {r: 6.6371665, g: 20.3539829, b: -1, a: -.681415975}
+      data:
+        first:
+          name: _ShoreTiling
+        second: {r: 1, g: 1, b: .100000001, a: .100000001}
+      data:
+        first:
+          name: _ReflectionTex_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
