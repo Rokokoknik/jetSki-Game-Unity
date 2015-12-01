@@ -8,7 +8,7 @@ public class CountdownTimer : MonoBehaviour {
 	private float mtimer;
 	// Use this for initialization
 	void Start () {
-	
+		gameObject.GetComponent<Text>().color = Color.green;
 	}
 	
 	// Update is called once per frame
@@ -22,11 +22,11 @@ public class CountdownTimer : MonoBehaviour {
 		string formattime = string.Format ("{0:00}:{1:00};{2:00}", minutes, seconds, milliseconds);
 
 		gameObject.GetComponent<Text>().text = formattime;
-		if (timer > 299f)
-			gameObject.GetComponent<Text>().color = Color.green;
-		if (timer == 60f)
+		//if (timer > 299f)
+		//	gameObject.GetComponent<Text>().color = Color.green;
+		if (Mathf.Ceil (timer) == 60)
 			gameObject.GetComponent<Text>().color = Color.yellow;
-		if (timer == 20f)
+		if (Mathf.Ceil (timer) == 20)
 			gameObject.GetComponent<Text>().color = Color.red;
 
 	}

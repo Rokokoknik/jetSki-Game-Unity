@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class JetSkiControl : MonoBehaviour {
 
 	private Rigidbody rb;
 
+	//public WheelCollider rudderright;
+	//public WheelCollider rudderleft;
+	//public float maxSteeringAngle;
 	public float thrust;
 	//public float resistance;
 	public float angle;
@@ -35,6 +39,15 @@ public class JetSkiControl : MonoBehaviour {
 
 		rotateangle += moveHorizontal * angle;
 		rb.rotation = Quaternion.AngleAxis (rotateangle, Vector3.up);
+
+		/* Adding wheel based turning, with a wheel collider (single wheel on the rear of the JetSki
+		*
+		* **Does not work, requires friction from a plane to operate, and additional wheels** 
+		if (moveHorizontal != 0.0f) {
+			rudderright.steerAngle = -moveHorizontal;
+			rudderleft.steerAngle = -moveHorizontal;
+		}
+		*/
 		//Vector3 turning = new Vector3(0.0f, angle, 0.0f);
 		//rb.AddRelativeTorque (moveHorizontal * turning);
 	}
