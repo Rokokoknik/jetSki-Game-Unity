@@ -29,6 +29,7 @@ public class playerController : MonoBehaviour
 	public float tilt;
 	public float angle;
 	public float rotateangle = 0.0f;
+	public float thrust;
 
 	private bool movingforward = false;
 	private bool movingbackward = false;
@@ -43,19 +44,23 @@ public class playerController : MonoBehaviour
 
 		//Checks to see what kind of movement to take (forward, backwards, or braking)
 		if (moveVertical > 0.0f && !movingbackward) {
-			rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
-			//rb.AddForce(transform.forward * (currentspeed/2.0f));
+			//rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
+			rb.AddRelativeForce(Vector3.forward * thrust * moveVertical);
 			movingforward = true;
 			if (currentspeed < maxspeed)
 				currentspeed += acceleration;
 		} else if (moveVertical < 0.0f && !movingforward) {
-			rb.velocity = rb.transform.TransformDirection (-Vector3.forward * currentspeed);
-			//rb.AddForce (-transform.forward * currentspeed);
+			//rb.velocity = rb.transform.TransformDirection (-Vector3.forward * currentspeed);
+			rb.AddRelativeForce (-Vector3.forward * thrust/2.0f);
 			movingbackward = true;
 			if (currentspeed < maxspeed)
 				currentspeed = currentspeed/2.0f + acceleration;
 		} else {
-			rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
+			//if (movingbackward)
+			//	rb.velocity = rb.transform.TransformDirection(-Vector3.forward * currentspeed);
+			//if (movingforward)
+			//	rb.velocity = rb.transform.TransformDirection (Vector3.forward * currentspeed);
+			//rb.AddForce (transform.forward * currentspeed);
 			if (currentspeed > 0.0f)
 			{
 				currentspeed -= deceleration;

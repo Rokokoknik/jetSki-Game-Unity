@@ -251,8 +251,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303336770}
-  m_LocalRotation: {x: .252440631, y: .179563805, z: .047738485, w: -.949606061}
-  m_LocalPosition: {x: 379.618195, y: -21.175211, z: 182.302368}
+  m_LocalRotation: {x: .147546634, y: .507787585, z: .0887601152, w: -.844099224}
+  m_LocalPosition: {x: 368.799988, y: -6.69999981, z: 192.300003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -325,7 +325,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -430,7 +432,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -589,7 +593,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -754,7 +760,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -925,6 +933,7 @@ GameObject:
   - 23: {fileID: 1725680875}
   - 54: {fileID: 1725680881}
   - 114: {fileID: 1725680879}
+  - 114: {fileID: 1725680880}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -950,7 +959,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -1002,6 +1013,24 @@ MonoBehaviour:
   floatHeight: 1
   buoyancyCentreOffset: {x: 0, y: 0, z: 0}
   bounceDamp: 0
+--- !u!114 &1725680880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725680874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3dc2a495d31644694a6ba6fd03d907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentspeed: 0
+  maxspeed: 10
+  acceleration: .100000001
+  deceleration: .5
+  tilt: 0
+  angle: 2
+  rotateangle: 0
 --- !u!54 &1725680881
 Rigidbody:
   m_ObjectHideFlags: 0
