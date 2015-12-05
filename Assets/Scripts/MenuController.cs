@@ -21,7 +21,7 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void LoadLevel1(){
-		Application.LoadLevel ("Level 1");
+
 	}
 
 	public void ToggleOptionsPanel(){
@@ -45,5 +45,9 @@ public class MenuController : MonoBehaviour {
 	public void ChangeFieldOfView(){
 		fieldOfView = fieldOfViewSlider.GetComponent<Slider> ().value;
 		GameObject.FindGameObjectsWithTag ("MainCamera") [0].gameObject.GetComponent<Camera> ().fieldOfView = fieldOfViewSlider.GetComponent<Slider> ().value;
+	}
+
+	public void RestartLevel(){
+		Application.LoadLevel (Application.loadedLevelName);
 	}
 }
