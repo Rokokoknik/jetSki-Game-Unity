@@ -8,7 +8,11 @@ public class BreakableCollider : MonoBehaviour {
 	void OnCollisionEnter (Collision collisioninfo)
 	{
 		if (collisioninfo.collider.tag.Equals ("Player")) {
-			DestroyObject (gameObject);
+
+			gameObject.GetComponent<AudioSource>().Play ();
+			//gameObject.GetComponent<MeshRenderer>().enabled = false;
+			Destroy (gameObject, 0.25f);
+			//DestroyObject (gameObject);
 			collisioninfo.rigidbody.AddForce (-Vector3.forward * weight);
 		}
 	}
