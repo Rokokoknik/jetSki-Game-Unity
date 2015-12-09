@@ -12,8 +12,6 @@ public class PauseMenu : MonoBehaviour {
 	public float rotationSpeed;
 	// Use this for initialization
 	void Start () {
-	//	cameraOriginalLocation = cameraRotation.transform.position;
-	//	cameraOriginalRotation = cameraRotation.transform.rotation;
 		rotationSpeed = 0;
 	}
 	
