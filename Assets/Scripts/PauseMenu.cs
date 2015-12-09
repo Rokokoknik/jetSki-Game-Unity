@@ -12,8 +12,8 @@ public class PauseMenu : MonoBehaviour {
 	public float rotationSpeed;
 	// Use this for initialization
 	void Start () {
-		cameraOriginalLocation = cameraRotation.transform.position;
-		cameraOriginalRotation = cameraRotation.transform.rotation;
+	//	cameraOriginalLocation = cameraRotation.transform.position;
+	//	cameraOriginalRotation = cameraRotation.transform.rotation;
 		rotationSpeed = 0;
 	}
 	
@@ -31,6 +31,8 @@ public class PauseMenu : MonoBehaviour {
 				}
 			}
 			else if(pauseMenu.activeSelf==false){
+				cameraOriginalLocation = cameraRotation.transform.position;
+				cameraOriginalRotation = cameraRotation.transform.rotation;
 				pauseMenu.SetActive (true);
 				rotationSpeed=0.5f;
 				Time.timeScale = 0;
