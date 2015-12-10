@@ -162,16 +162,16 @@ Material:
         second: 313.218384
       data:
         first:
-          name: _InvFade
-        second: .628782988
-      data:
-        first:
           name: _FresnelScale
         second: .657142818
       data:
         first:
           name: _GerstnerIntensity
         second: 1.67142856
+      data:
+        first:
+          name: _InvFade
+        second: .628782988
       data:
         first:
           name: _HeightDisplacement

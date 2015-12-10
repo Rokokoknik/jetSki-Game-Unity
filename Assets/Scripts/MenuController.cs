@@ -21,7 +21,8 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void LoadLevel1(){
-
+		Application.LoadLevel ("Level 1");
+		Time.timeScale = 1;
 	}
 
 	public void ToggleOptionsPanel(){
@@ -49,5 +50,6 @@ public class MenuController : MonoBehaviour {
 
 	public void RestartLevel(){
 		Application.LoadLevel (Application.loadedLevelName);
+		Time.timeScale = 1;
 	}
 }
