@@ -1,0 +1,45 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.214 seconds
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Gerald\Documents\CSCI\GD\Assignment1StarterProject\Project\jetSkiGame\JetSkiGame_Data\Managed\System.dll (this message is harmless)
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2cf8 -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.370461 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 27152.
+Total: 7.856288 ms (FindLiveObjects: 2.107654 ms CreateObjectMapping: 0.739772 ms MarkObjects: 4.676332 ms  DeleteObjects: 0.331296 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 26.405210 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 15568.
+Total: 5.317989 ms (FindLiveObjects: 1.208596 ms CreateObjectMapping: 0.864984 ms MarkObjects: 2.958680 ms  DeleteObjects: 0.283675 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.228009 ms
+
+Unloading 660 unused Assets to reduce memory usage. Loaded Objects now: 346.
+Total: 4.587248 ms (FindLiveObjects: 0.067326 ms CreateObjectMapping: 0.068147 ms MarkObjects: 0.562424 ms  DeleteObjects: 3.888117 ms)
+

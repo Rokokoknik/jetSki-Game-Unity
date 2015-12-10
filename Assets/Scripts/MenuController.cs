@@ -21,7 +21,7 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void LoadLevel1(){
-		Application.LoadLevel ("Level 1");
+		Application.LoadLevel ("level-1");
 		Time.timeScale = 1;
 	}
 
