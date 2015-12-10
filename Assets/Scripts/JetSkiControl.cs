@@ -12,6 +12,14 @@ public class JetSkiControl : MonoBehaviour {
 	public float thrust;
 	//public float resistance;
 	public float angle;
+	private AudioSource jetskiidle;
+	private AudioSource jetskimove;
+	private AudioSource jetskisplash;
+	private bool moveclip;
+	private bool idleclip;
+	private bool inair;
+	private Vector3 getposition;
+	//public AudioClip[] clips;
 
 	//private bool moveforward = false;
 	//private bool movereverse = false;
@@ -19,21 +27,70 @@ public class JetSkiControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
+		AudioSource[] clips = GetComponents<AudioSource>();
+		jetskiidle = clips [0];
+		jetskimove = clips [1];
+		jetskisplash = clips [2];
+
 	}
+
+	void OnCollisionEnter (Collision collisioninfo) {
+		if (collisioninfo.gameObject.tag == "Ramp") {
+			jetskiidle.Stop ();
+			idleclip = true;
+			jetskimove.Stop ();
+			moveclip = true;
+		}
+	}
+
+	void OnCollisionExit (Collision collisioninfo) {
+		if (collisioninfo.gameObject.tag == "Ramp") {
+			inair = true;
+		}
+	}
+
 
 	void FixedUpdate()
 	{
 		float moveVertical = Input.GetAxis ("Vertical");
 		float moveHorizontal = Input.GetAxis ("Horizontal");
+		getposition = transform.position;
 
+		if (inair && getposition.y <= 232) {
+			jetskisplash.Play ();
+			idleclip = false;
+			moveclip = false;
+			inair = false;
+		}
 		if (moveVertical > 0.0f) {
 			rb.AddRelativeForce (Vector3.forward * thrust);
+			if (!moveclip) {
+				jetskimove.Play ();
+				jetskiidle.Stop ();
+				idleclip = false;
+				moveclip = true;
+			}
+			//clips [1] = gameObject.AddComponent ("AudioSource") as AudioSource;
 			//moveforward = true;
-		}
-		if (moveVertical < 0.0f) {
-			rb.AddRelativeForce (-Vector3.forward * thrust/2.0f);
+		} else if (moveVertical < 0.0f) {
+			rb.AddRelativeForce (-Vector3.forward * thrust / 2.0f);
+			if (!moveclip) {
+				jetskimove.Play ();
+				jetskiidle.Stop ();
+				idleclip = false;
+				moveclip = true;
+			}
+			//clips [1] = gameObject.AddComponent ("AudioSource") as AudioSource;
 			//movereverse = true;
+		} else {
+			if (!idleclip) {
+				jetskiidle.Play ();
+				jetskimove.Stop ();
+				moveclip = false;
+				idleclip = true;
+			}
 		}
+		//clips [0] = gameObject.AddComponent ("AudioSource") as AudioSource;
 		//if (moveHorizontal != 0.0f)
 		//	rb.AddForce (-transform.forward * resistance);
 
